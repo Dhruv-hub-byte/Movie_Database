@@ -13,7 +13,7 @@ function App() {
   });
 
   // ✅ Correct base API URL (IMPORTANT FIX)
-  const apiurl = "http://www.omdbapi.com/?apikey=635bdcab";
+  const apiurl = "https://www.omdbapi.com/?apikey=635bdcab";
 
   // ✅ Search movies
   const search = (e) => {
@@ -28,6 +28,10 @@ function App() {
           results: results
         }));
 
+      })
+
+      .catch(err=> {
+        console.log("API ERROR:",err)
       });
 
     }
